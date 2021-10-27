@@ -16,4 +16,20 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss"  scoped>
+
+h2 {
+  color: rgb(247, 4, 154);
+  border: 1px solid rgb(131, 12, 18);
+  width: 300px;
+  text-align: center;
+  box-shadow: inset 0 0 20px 0 #89ee05;
+}
+h3 {
+  color: rgb(8, 240, 131);
+  border: 1px solid rgb(199, 243, 4);
+  width: 300px;
+  text-align: center;
+  box-shadow: inset 0 0 20px 0 #05eee2;
+}
+</style>

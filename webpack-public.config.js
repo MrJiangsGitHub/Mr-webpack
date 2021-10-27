@@ -21,8 +21,10 @@ module.exports = {
                 // use: 用哪些loader进行转化。（多个从右到左开始转换）
                 test: /\.css$/,
                 use: [{
+
                     loader: MiniCssExtractPlugin.loader,
                     options: {
+                        //关闭es6语法冲突
                         esModule: false
                     }
                 }, 'css-loader', 'postcss-loader']
