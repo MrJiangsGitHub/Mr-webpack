@@ -1,14 +1,15 @@
 <template>
   <div>
     <h1>加油-{{ message }}</h1>
-    <router-link to="/sports/add">用户组件</router-link>
-    <router-link to="/sports/arr">用户信息</router-link>
+    <router-link to="/sports/userinfo">用户信息</router-link>
+    <router-link to="/sports/userlocation">用户地址</router-link>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
+  name: "Sports",
   data() {
     return {
       message: "干巴得",

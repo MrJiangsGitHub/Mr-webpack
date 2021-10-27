@@ -6,6 +6,7 @@
 
 <script>
     export default {
+        name:'Register',
         data(){
             return{
                 message:'嗦嘎'

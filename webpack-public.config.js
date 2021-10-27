@@ -76,7 +76,8 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env']
+                        presets: ['@babel/preset-env'],
+                        plugins: ['@babel/plugin-transform-runtime']
                     }
                 }
             },
@@ -95,7 +96,7 @@ module.exports = {
             // 每次打包重命名资源，可以防止客户端缓存
             filename: "[name]-[hash:8].css",
         }),
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
     ],
     resolve: {
         alias: {
@@ -107,7 +108,9 @@ module.exports = {
             '@api': path.join(__dirname, 'src/api'),
             //配置util目录
             '@util': path.join(__dirname, 'src/util'),
-        }
+        },
+        // 可以忽略以下扩展名，会按照顺序依次匹配
+        extensions: ['.js', '.json', '.vue'],
     }
 
 }
